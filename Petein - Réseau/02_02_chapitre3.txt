@@ -1,0 +1,20 @@
+#CHAPITRE 3 PETEIN RESEAU 
+
+##DHCP :
+
+###IPV4 :
+####Type d'attibution 
+
+- Attribution automatique d’adresse IP (DHCP automatique)
+Le serveur DHCP attribue une adresse IP une seule fois à un client.
+Cette IP est ensuite conservée définitivement pour ce client (tant que la config DHCP existe).
+
+- Attribution dynamique d’adresse IP (DHCP dynamique)
+Le serveur DHCP attribue une adresse IP pour une durée limitée appelée bail (lease).
+
+
+###DORA : 
+- Discover : client fait broadcast pour trouver serveur DHCP 
+- Offer : 
+- Request :
+- Acknowlege : 

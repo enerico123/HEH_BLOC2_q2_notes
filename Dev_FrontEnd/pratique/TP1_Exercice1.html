@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <img src="images/renard.jpg" width="500" id="photo">
+    </main>
+    <script>
+        let variable = document.getElementById("photo");
+        
+        function changerimg(){
+            
+            if (this.src.endsWith("renard.jpg")){
+                this.src = "images/herisson.jpg";
+            }
+            else{
+                this.src = "images/renard.jpg";
+            }
+        }
+        variable.addEventListener("click",changerimg);
+    </script>
+</body>
+</html>

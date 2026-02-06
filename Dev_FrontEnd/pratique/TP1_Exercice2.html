@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Commande</h1>
+        <form action="">
+            <input type="number" id="nombre">
+            <span id="article">article à 12.50€ </span><br>
+            <span>Total article:</span>
+            <span id="total">0</span>
+            <span>€</span>
+        </form>
+    </main>
+    <script>
+        let input = document.getElementById("nombre");
+        function changenbr(){
+
+            let variable_span = document.getElementById("article");
+            let valeur = input.value ;
+            console.log(valeur);
+
+            if(valeur <= 1){
+                variable_span.textContent = "article à 12.50€";
+            }
+            else{
+                variable_span.textContent = "articles à 12.50€";
+            }
+            let total = document.getElementById("total");
+            console.log(total)
+            total.textContent = 12.50*valeur;
+        }
+        input.addEventListener("change",changenbr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Votre Pizza</h1>
+
+            <form action="">
+                <select id="pizza">
+                    <option value="Margarita">Margarita</option>
+                    <option value="Peperoni">Peperoni</option>
+                    <option value="Poulet sauce algé">Poulet sauce algé</option>
+                </select><br>
+                <input type="radio" name="supplement" id="avec" value="avec">
+                <label for="">avec suppléments</label><br>
+                <input type="radio" name="supplement" id="sans" value="sans" checked>
+                <label for="">sans suppléments</label><br>
+
+                <div id="supplement" class="hidden">
+                    <input type="checkbox" id="fromage">
+                    <label for="fromage">fromage</label><br>
+                    <input type="checkbox" id="olive">
+                    <label for="olive">olive</label><br>
+                    <input type="checkbox" id="piment">
+                    <label for="piment">piment</label><br>
+                </div>
+                
+
+            </form>
+
+            <form action="">
+                <label for="">payement :</label><br>
+                <input type="radio" name="mode_payement" id="cash" value="cash" >
+                <label for="">CASH</label><br>
+                <input type="radio" name="mode_payement" id="visa" value="visa">
+                <label for="">VISA</label><br>
+                <p>prix : </p>
+                <span>0</span>
+                <span>€</span><br><br>
+                <button type="submit">commandez !</button>
+            </form>
+        </main>
+        <script>
+            let avec = document.getElementById("avec")
+            let sans = document.getElementById("sans")
+            let bloc = document.getElementById("supplement")
+
+            avec.addEventListener("change",function(){
+                bloc.classList.remove("hidden")
+            })
+            sans.addEventListener("change",function(){
+                bloc.classList.add("hidden")
+            })
+            
+
+            let prix = new Array 
+        </script>
+    </body>
+    </html>

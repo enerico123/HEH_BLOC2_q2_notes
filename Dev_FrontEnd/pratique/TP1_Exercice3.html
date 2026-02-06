@@ -1,0 +1,54 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <form action="">
+                <label for="">mot de passe :</label><br>
+                <input type="password" id="mdp" >
+                <meter min="0" max="15" value="0" low="5" high="10" id="bar" optimum="15"></meter><br>
+                <input type="checkbox" id="box"><label>afficher le mot de passe</label>
+            </form>
+        </main>
+        <script>
+            let mdp = document.getElementById("mdp")
+            function fctmdp(){
+                let meter_bar = document.getElementById("bar");
+                let liste_mdp_courant = new Array ("123456", "12345", "1234", "abc123", "abc",
+                                                    "pwd", "password", "mypassword", "dragon", "monkey", "shadow",
+                                                    "master", "superman", "spiderman", "batman", "god", "sex", "boobs",
+                                                    "azerty", "qwerty", "iloveyou", "computer", "welcome", "matrix",
+                                                    "secret", "login")
+                let motdepasse = mdp.value ;
+                console.log(motdepasse)
+                if (liste_mdp_courant.includes(motdepasse)){
+                    meter_bar.value = 1
+                }
+                else{
+                    meter_bar.value = motdepasse.length 
+                }
+                
+                
+            }
+            mdp.addEventListener("change",fctmdp)
+            let box = document.getElementById("box");
+            function boxchange(){
+                if(mdp.type==="text"){
+                    mdp.type = "password"
+                }
+                else{
+                    mdp.type = "text"
+                }
+                
+            }
+            box.addEventListener("change",boxchange)
+
+
+            
+        </script>
+    </body>
+    </html>

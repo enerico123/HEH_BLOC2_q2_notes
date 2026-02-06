@@ -1,0 +1,40 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <p>Adresses : 
+            <span class="email std">prénom.nom1</span>
+            <span class="email std">prénom.nom2</span>
+            <span class="email">prénom.nomprof</span></p>
+        </main>
+        <script>
+            window.addEventListener("load",function(){
+                setTimeout(construireEmail, 300);
+            });
+            function construireEmail(){
+                let emails = document.getElementsByClassName("email");
+                
+                for (let email of emails){
+
+                    let base = email.textContent
+                    let is_etudiant = email.classList.contains("std");
+                    const mail_etudiant = "@std.heh.be"
+                    const mail_prof = "@heh.be"
+
+                    if (is_etudiant){
+                        email.textContent = base + mail_etudiant
+                    } else {
+                        email.textContent = base + mail_prof
+                    }
+                }
+                
+            }
+
+        </script>
+    </body>
+    </html>
