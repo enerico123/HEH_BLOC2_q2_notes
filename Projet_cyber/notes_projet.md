@@ -13,7 +13,7 @@
 ## Sécurité 
 
 - UTM FortiGate
-- configuration des périphétique
+- configuration des périphérique
 - Respecter les normes CYFUN 
 - Parrefeu : 
     - VDOM (Parefeu virtuel)

@@ -10,6 +10,8 @@
 - identifiant (id.priorité)
 - status learning, protocol pas terminé 
 
+![alt text](images_notes/image1.png)
+
 ## Conception STP 
 
 - pas laisser le STP automatiquement choisir le root bridge 
@@ -77,5 +79,6 @@ Il peut y avoir qu'un actif par groupe logique
 
 
 Commandes pour setup tout ca :
+
 ![alt text](images_notes/image.png)
 
