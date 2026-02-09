@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+    // $(function) à mettre si script mal placé car il va attendre que le DOM soit chargé avant de lancer
+    $(function(){
+        $('main').attr('id','principal');
+        $('p','a473').text('20€'); // cherche a473 dans p 
+        $('#a168, #a119').addClass('erreur'); 
+        $('.erreur').css('color','red'); // change le texte en rouge de la classe erreur
+        $('section#rupture').after('<section id="avenir"</section>'); // ajouter une section avenir apres la section rupture
+        $('#avenir').html('<h2>À venir</h2>');
+    })
+        
+
+    </script>
+</body>
+</html>
