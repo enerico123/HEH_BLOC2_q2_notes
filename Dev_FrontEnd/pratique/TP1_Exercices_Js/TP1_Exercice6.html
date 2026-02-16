@@ -1,5 +1,5 @@
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,12 @@
             <form action="">
                 <select id="pizza">
                     <option value="Margarita">Margarita</option>
-                    <option value="Peperoni">Peperoni</option>
-                    <option value="Poulet sauce algé">Poulet sauce algé</option>
+                    <option value="Regina">Regina</option>
+                    <option value="Capricciosa">Capricciosa</option>
+                    <option value="Quattro Formaggi">Quattro Formaggi</option>
+                    <option value="Diavola">Diavola</option>
+                    <option value="Marinara">Marinara</option>
+
                 </select><br>
                 <input type="radio" name="supplement" id="avec" value="avec">
                 <label for="">avec suppléments</label><br>
@@ -44,7 +48,7 @@
                 <input type="radio" name="mode_payement" id="visa" value="visa">
                 <label for="">VISA</label><br>
                 <p>prix : </p>
-                <span>0</span>
+                <span id="prix_toto">8</span>
                 <span>€</span><br><br>
                 <button type="submit">commandez !</button>
             </form>
@@ -61,8 +65,36 @@
                 bloc.classList.add("hidden")
             })
             
+            let prix_pizza = {
+                "Margarita" : 8 , 
+                "Regina" : 10 , 
+                "Capricciosa":11,
+                "Quattro Formaggi":10.5,
+                "Diavola":9.5,
+                "Marinara":12.5, 
 
-            let prix = new Array 
+            }
+
+            let prix_supplement = 0 
+
+            let prix_total = 0 ; 
+
+            let menu_deroulant_pizza = document.getElementById("pizza") ; 
+
+
+
+            let affichagePrix = document.getElementById("prix_toto"); 
+
+            // prix pizza + affichage 
+            menu_deroulant_pizza.addEventListener("change", function(){
+                prix_total =+ prix_pizza[this.value];
+                affichagePrix.textContent = prix_total
+            });
+            
+            let suppement_click = document.getElementById("supplement");
+
+
+
         </script>
     </body>
     </html>
