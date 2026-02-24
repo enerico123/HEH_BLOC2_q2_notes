@@ -6,7 +6,7 @@ Objectif Exercice :
 - Trouver : 
     - root bridge (RB)
     - root port (RP)
-    - determinated port (DP)
+    - designated port (DP)
     - bloqued port (B)
 
 Comment procéder : 
@@ -16,6 +16,8 @@ Comment procéder :
 - Déterminer les DP (designated port) -> port de chaque segment le plus proche du routeur / si même cout de chaque coté -> regarder la plus basse priorité 
 - déterminer les port bloqués -> ce qu'il reste 
 
+
+![alt text](images_notes/image7.png)
 
 # Chapitre 7 : Agrégation de liaison 
 
@@ -56,6 +58,8 @@ fonctionnement : envoie des paquets toutes les 30 secondes pour verifier la coh�
 - On : force etherchannel 
 - Desirable : Negociation active (initie la négo.)
 - Auto : Négociation passive (attend une invitation à la négo)
+
+![alt text](images_notes/image8.png)
 
 ### LACP 
 
