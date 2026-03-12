@@ -1,27 +1,28 @@
-const books = [
+import { useState } from "react";
+
+const book = 
     {
-        title: "The Great Gatsby",
+        title: "MONLIVREHAHA",
         url: "https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg",
         author: "F. Scott Fitzgerald",
         num_comments: 5,
         points: 10,
         objectID: 0,
-    },
-    {
-        title: "To Kill a Mockingbird",
-        url: "https://images-na.ssl-images-amazon.com/images/I/81OtwF1XcDL.jpg",
-        author: "Harper Lee",
-        num_comments: 10,
-        points: 8,
-        objectID: 1,
     }
-]
 
-const List = () => {
+
+
+
+const List = (props) => {
+    const [addbook,setaddbook] = useState(props.list)
+    const add = () => {
+        setaddbook((prev) => [...prev, book]);
+    }
 
     return(
+        <>
         <ul>
-            {books.map((book) => (
+            {addbook.map((book) => (
                 <li key={book.objectID}>
                     <span><a href={book.url}>{book.title}</a></span>
                     <span>{book.author}</span>
@@ -30,6 +31,8 @@ const List = () => {
                 </li>
             ))}
         </ul>
+        <button onClick={add}>Add</button>
+        </>
     )
 
 }
