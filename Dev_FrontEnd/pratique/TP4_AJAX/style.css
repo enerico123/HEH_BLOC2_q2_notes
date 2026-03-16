@@ -1,0 +1,28 @@
+html { font-family:Calibri; font-size:125%; color:#222; padding:0; margin:0; } 
+body { padding:0; margin:0; } 
+header { text-align:center; padding:1rem; background-image:linear-gradient(#ccc,#fff);}
+footer { text-align:center; padding:1rem; background-image:linear-gradient(#fff,#aaa);}
+h1 { font-family:Harlow Solid, cursive; margin:0; }
+h1 a { color:inherit; text-decoration:none; }
+main { margin:0 auto; width:92vw; min-height:82vh; }
+img { max-width:100%; }
+.red { color:red; }
+.flex {display:flex; flex-flow:row wrap; justify-content:center; }
+figure { width:200px; }
+figure img { display:block; }
+figure .media { position:relative; user-select:none; border-radius:1rem; overflow:hidden; }
+figure .media .heart { display:none; justify-content:center; align-items:center; font-size:3rem; color:#c02; position:absolute; left:0; top:0; right:0; bottom:0; background-color:#0008;}
+figure:not(.ilike) .media { cursor:pointer; }
+figure:not(.ilike) .media:hover .heart { display:flex; }
+figure:not(.ilike) .media:active .heart { background-color:#fff8; }
+figure figcaption h4 { text-align:center; font-family:Harlow solid, cursive; padding:0 0.5rem; margin:0; }
+figure .tools { display:flex; flex-flow:row nowrap; justify-content:space-between; margin:-0.25rem 0; padding:0 0.5rem; user-select:none;}
+figure .tools span { cursor:pointer; padding:0.25rem;}
+figure .tools span:hover { color:#c02; background-color:#ccc; border-radius:50%;}
+figure .tools span:active { background-color:#fac; }
+figure.ilike .tools span { color:#c02; }
+figure.ilike .tools span:hover { color:inherit; }
+#scroll_infini { margin:1rem; padding:10rem 5rem; background-size:100px 100px; background-position:center center; background-image:url(arrow-down.png); background-repeat:no-repeat; }
+#scroll_infini.loading { background-image:url(loading.gif); }
+
+
