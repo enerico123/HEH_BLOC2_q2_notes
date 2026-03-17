@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Item from './Item'
+
 
 const book = 
     {
@@ -14,21 +16,18 @@ const book =
 
 
 const List = (props) => {
-    const [addbook,setaddbook] = useState(props.list)
+    const [extraBooks, setExtraBooks] = useState([])
+
     const add = () => {
-        setaddbook((prev) => [...prev, book]);
+        setExtraBooks((prev) => [...prev, book]);
     }
+    const allBooks = [...props.list, ...extraBooks]
 
     return(
         <>
         <ul>
-            {addbook.map((book) => (
-                <li key={book.objectID}>
-                    <span><a href={book.url}>{book.title}</a></span>
-                    <span>{book.author}</span>
-                    <span>{book.num_comments}</span>
-                    <span>{book.points}</span>
-                </li>
+            {allBooks.map((item) => (
+                return <Item key={item.objectID} item={item}/> // problème ici 
             ))}
         </ul>
         <button onClick={add}>Add</button>
