@@ -27,7 +27,7 @@ const List = (props) => {
         <>
         <ul>
             {allBooks.map((item) => (
-                return <Item key={item.objectID} item={item}/> // problème ici 
+                <Item key={item.objectID} item={item}/>
             ))}
         </ul>
         <button onClick={add}>Add</button>

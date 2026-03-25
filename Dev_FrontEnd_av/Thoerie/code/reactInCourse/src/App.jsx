@@ -7,10 +7,6 @@ import { useState } from 'react';
 
 
 function App() {
-  const welcome = {
-    greeting : "Salut",
-    title : "React"
-  };
 
   const books = [
     {
@@ -96,7 +92,17 @@ function App() {
 
 ]
 
+  const welcome = {
+    greeting : "Salut",
+    title : "React"
+  };
+
   const [bookFilter, setBookFilter] = useState(books)
+  
+  const [isShow,setIsShow] = useState(false)
+  const handleChekedChange = (event) => {
+    setIsShow(event.target.checked)
+  }
 
   const handleSearch = (event) => {
     let searchTerm = event.target.value
@@ -111,7 +117,14 @@ function App() {
     <>
     <div>
       <h1>{welcome.greeting} {welcome.title}</h1>
-      <Search callBack={handleSearch}/>
+      <div>
+        <input 
+          type="checkbox"
+          name="searchBar"
+          onChange={handleChekedChange} />
+        <label htmlFor="searchBar">Show Search Bar</label>
+      </div>
+      {isShow && <Search callBack={handleSearch}/>}
     </div>
     <hr />
     <List list={bookFilter}/>
